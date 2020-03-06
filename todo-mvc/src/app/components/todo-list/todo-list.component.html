@@ -1,0 +1,10 @@
+<app-todo-item
+*ngFor="let item of todolist |async "
+[todo]='item'
+(changeStatus)="onChangeStatus($event)"
+(changeContent)= "onChangeContent($event)"
+(removeTodo)="onDeleteTodo($event)"
+>
+
+</app-todo-item>
+

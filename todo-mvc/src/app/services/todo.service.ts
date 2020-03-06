@@ -88,6 +88,10 @@ export class TodoService {
     this.todos.splice(index,1);
     this.updateTodoLocalStorage();
   }
+  clearTodoCompleted(){
+    this.todos = this.todos.filter(t => !t.isCompleted);
+    this.updateTodoLocalStorage();
+  }
   toggleAll(){
     this.todos = this.todos.map(t => {
       return{

@@ -13,6 +13,6 @@
         {{ btn.label }}
       </button>
     </div>
-    <button class="filter-btn clear-completed-btn" [ngClass]="{'visible' : hasComplete$}">Clear Completed</button>
+    <button class="filter-btn clear-completed-btn" [ngClass]="{'visible' : hasComplete$ | async}">Clear Completed</button>
   </div>
 </div>

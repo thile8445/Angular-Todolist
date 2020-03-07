@@ -40,6 +40,9 @@ export class FooterComponent implements OnInit {
       t.isActive = t.type === type;
     })
   }
+  clearCompleted(){
+    this.todoService.clearTodoCompleted();
+  }
   ngOnDestroy(){
     this.destroy$.next();
     this.destroy$.complete();
